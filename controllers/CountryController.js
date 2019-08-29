@@ -34,6 +34,17 @@ module.exports = {
                     reject(err)
                 })
         })
+    },
+    put: (id, params) => {
+        return new Promise((resolve, reject) => {
+            Country.findByIdAndUpdate(id, params, { new: true })
+                .then(data => {
+                    resolve(data)
+                })
+                .catch(err => {
+                    reject(err)
+                })
+        })
     }
 
 }
