@@ -17,7 +17,7 @@ app.use(bodyParser.json())
 app.use('/api', api)
 
 app.get('/', (req, res) => {
-    res.send('Ola')
+    res.send('CRUD application')
 })
 
 app.listen(3000, () => console.log('Servidor rodando na porta 3000'))
